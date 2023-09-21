@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+*{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+h1{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+img{
+    width: 100%;
+}
+.carousel-control-next:hover{
+    background: rgb(2,0,36);
+background: -moz-linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+background: -webkit-linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#ffffff",GradientType=1);
+transition: all 1s ease-in-out;
+}
+.carousel-control-prev:hover{
+    background: rgb(2,0,36);
+background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#ffffff",GradientType=1);
+transition: all 1s ease-in-out;
+}
+.herouno{
+    background-image: url('../images/herotres.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.herodos{
+    background-image: url('../images/herodos.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.herotres{
+    background-image: url('../images/herouno.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.hero{
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh;
+}
+.heroh1{
+    font-size: 75px;
+	/* text-shadow: #444444 4px 4px 1px; */
+    color: #ffffff;
+    padding: 5px 0px;
+}
+.herop{
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+.herodos h2{
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: -2px;
+}
+.herodosh1{
+    font-size: 70px;
+    text-align: center;
+    color: #ffffff;
+}
+.servicios{
+    padding: 70px 0px;
+    text-align: center;
+}
+.servicios img{
+    width: 17%;
+    margin-bottom: 8px;
+}
+.servicios h2{
+    background-color: #0404e2;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: #ffffff;
+    width: 20%;
+    text-align: center;
+}
+.servicestitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 35px;
+}
+.cardservices{
+    box-shadow: 0px 0px 9px 0px #e7e7e7;
+    padding: 55px 15px;
+    border-radius: 15px;
+}
+.filosofia{
+    padding-top: 70px;
+}
+.filosofiah2{
+    font-size: 20px;
+    background-color: #0404e2;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: #ffffff;
+    width: 70%;
+    text-align: center;
+    transform: rotate(-3deg);
+}
+.filosofia p{
+    margin-top: 35px;
+}
+.team{
+    padding: 70px 0px 100px 0px;
+    background-color: #0a0a46;
+}
+.team h2{
+    color: #ffffff;
+    font-weight: 700;
+}
+.teamh2{
+    background-color: #000;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: #ffffff;
+    text-align: center;
+    transform: rotate(-4deg);
+    display: inline-block;
+}
+.membresias{
+    padding: 80px 80px;
+}
+.membership{
+    padding: 45px 35px;
+}
+.membership h3{
+    font-weight: 700;
+    font-size: 20px;
+}
+.membership span{
+    font-size: 30px;
+}
+.membership p{
+    margin: 2px !important;
+}
+.memberp{
+    font-size: 12px;
+    padding-bottom: 8px !important;
+}
+.black{
+    background-color: #cecece;
+    border-radius: 25px;
+
+}
+.unete{
+    background-color: #e7e7e7;
+    padding: 80px 0px;
+}
+.retoh2{
+    background-color: #000;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: #ffffff;
+    text-align: center;
+    transform: rotate(3deg);
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.membresias h2{
+    font-weight: 700;
+    font-size: 35px;
+}
+.footer{
+    padding: 70px 0px;
+    background-color: #161616;
+}
+.footer a{
+    color: #ffffff;
+}
+.derechos{
+    padding-top: 15px;
+    color: #ffffff;
+    font-size: 12px;
+    background-color: #000000;
+}
+@media screen and (max-width: 1000px){
+    .herouno{
+        background-position: center;
+    }
+    .herodos{
+        background-position: center;
+    }
+    .heroh1{
+        font-size: 50px;
+    }
+    .herodosh1{
+        font-size: 38px;
+    }
+    .herodos h2{
+        font-weight: 300;
+    }
+    .servicios h2{
+        background-color: #0404e2;
+        padding: 5px 10px;
+        border-radius: 15px;
+        color: #ffffff;
+        width: 50%;
+        text-align: center;
+    }
+    .cardservices{
+        margin: 20px 0px;
+    }
+    .filosofia{
+        padding-top: 20px;
+    }
+    .filosofia h2:nth-child(1){
+        font-size: 35px;
+    }
+    .membresias{
+        padding: 70px 0px;
+    }
+    .retoimg{
+        margin-top: 35px;
+    }
+}
