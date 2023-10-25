@@ -10,7 +10,7 @@ require 'dbcon.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Usuarios | METAMORFIT</title>
+    <title>Historial Ficha | METAMORFIT</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/ico.ico" />
@@ -26,9 +26,9 @@ require 'dbcon.php';
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h4>USUARIOS
+                <h4>Historial Ficha
                 <button type="button" class="btn btn-primary btn-sm float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Nuevo usuario
+                Nueva Ficha
                 </button>
                     <a style="margin:0px 5px;" href="dashboard.php" class="btn btn-dark btn-sm float-end">Inicio</a>
                 </h4>
@@ -40,13 +40,17 @@ require 'dbcon.php';
                         <tr>
                             
                             <th>Username</th>
-                            <th>Rol</th>
+                            <th>Peso</th>
+                            <th>Altura</th>
+                            <th>Porcentaje De Grasa</th>
+                            <th>Masa Muscular</th>
+                            <th>Medición Cintura</th>
                             <th>Acción</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php 
-                            $query = "SELECT * FROM usuarios ORDER BY id DESC";
+                            $query = "SELECT * FROM historialficha ORDER BY id DESC";
                             $query_run = mysqli_query($con, $query);
                             if(mysqli_num_rows($query_run) > 0)
                             {
@@ -99,16 +103,36 @@ require 'dbcon.php';
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">NUEVO USUARIO</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">NUEVA FICHA</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="codeusuarios.php" method="POST">
+        <form action="codehistorialficha.php" method="POST">
             <div class="row">
               
 
                 <div class="col-12 col-md-5 mt-3">
-                    <input type="text" class="form-control" name="username" id="username" placeholder="Nombre de usuario" autocomplete="off" required>
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Nombre de Usuario" autocomplete="off" required>
+                </div>
+
+                <div class="col-12 col-md-5 mt-3">
+                    <input type="number" class="form-control" name="peso" id="peso" placeholder="Peso en Kg" autocomplete="off" required>
+                </div>
+
+                <div class="col-12 col-md-5 mt-3">
+                    <input type="number" class="form-control" name="altura" id="altura" placeholder="Altura en cm" autocomplete="off" required>
+                </div>
+
+                <div class="col-12 col-md-5 mt-3">
+                    <input type="number" class="form-control" name="porcentajegrasa" id="pocentajegrasa" placeholder="Porcentaje de Grasa" autocomplete="off" required>
+                </div>
+
+                <div class="col-12 col-md-5 mt-3">
+                    <input type="number" class="form-control" name="masamuscular" id="masamuscular" placeholder="Masa Muscular" autocomplete="off" required>
+                </div>
+
+                <div class="col-12 col-md-5 mt-3">
+                    <input type="number" class="form-control" name="medicioncintura" id="medicioncintura" placeholder="Medida de la Cintura" autocomplete="off" required>
                 </div>
 
                 <div class="col-12 col-md-7 mt-3">
